@@ -1,1 +1,3 @@
 000001, Blake, Szalapski, Mr., 2002
+000002, John, Doe, Mr., 1997
+000003, Jane, Doe, Ms., 1987
