@@ -17,7 +17,7 @@ public class ProductWriter {
         String Description = "";
         String rec ="";
         Double Cost = 0.0;
-        ArrayList<String> product = new ArrayList<>();
+        ArrayList<Product> product = new ArrayList<>();
 
 
         Scanner in = new Scanner(System.in);
@@ -29,10 +29,11 @@ public class ProductWriter {
             Description = SafeInput.getNonZeroLenString(in, "Enter the product description");
             Cost = SafeInput.getRangedDouble(in, "Enter the product cost", 1.00, 99999999.00);
 
-            rec = (ID + ", " + Name + ", " + Description + ", " + Cost);
-            System.out.println(rec);
 
-            product.add(rec);
+
+            Product item = new Product(ID, Name, Description, Cost);
+            System.out.println(item);
+            product.add(item);
 
             doneInput = SafeInput.getYNConfirm(in,"Are you done? [Y/N]");
 
@@ -47,9 +48,9 @@ public class ProductWriter {
             BufferedWriter writer =
                     new BufferedWriter(new OutputStreamWriter(out));
 
-            for(String item: product)
+            for(Product item: product)
             {
-                writer.write(item, 0, item.length());
+                writer.write(item.toString(), 0, item.toString().length());
                 writer.newLine();
             }
 

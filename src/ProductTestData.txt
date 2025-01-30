@@ -1,3 +1,1 @@
-000001, Keyboard, HyperX Alloy Elite II Keyboard, 90.0
-000002, GPU, Asus ROG Strix GeForce RTX 4070 Super OC, 749.99
-000003, CPU, AMD Ryzen 7 5700X3D , 209.99
+000001, Shirt, Nice Blue Shirt, 10.0

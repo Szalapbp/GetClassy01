@@ -16,9 +16,8 @@ public class PersonGenerator {
         String firstName = "";
         String lastName = "";
         String title = "";
-        String rec ="";
         int YOB = 0;
-        ArrayList<String> people = new ArrayList<>();
+        ArrayList<Person> people = new ArrayList<>();
 
 
         Scanner in = new Scanner(System.in);
@@ -30,10 +29,10 @@ public class PersonGenerator {
             title = SafeInput.getNonZeroLenString(in, "Enter your title");
             YOB = SafeInput.getRangedInt(in, "Enter your year of birth", 1000, 9999);
 
-            rec = (ID + ", " + firstName + ", " + lastName + ", " + title + ", " + YOB);
-            System.out.println(rec);
+            Person person = new Person(ID, firstName, lastName, title, YOB);
+            System.out.println(person);
 
-            people.add(rec);
+            people.add(person);
 
             doneInput = SafeInput.getYNConfirm(in,"Are you done? [Y/N]");
 
@@ -48,9 +47,8 @@ public class PersonGenerator {
             BufferedWriter writer =
                     new BufferedWriter(new OutputStreamWriter(out));
 
-            for(String person : people)
-            {
-                writer.write(person, 0, person.length());
+            for(Person person : people) {
+                writer.write(person.toString(), 0, person.toString().length());
                 writer.newLine();
             }
 

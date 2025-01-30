@@ -112,13 +112,7 @@ private int YOB = 0;
 
     @Override
     public String toString() {
-        return "Person{" +
-                "ID='" + ID + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", title='" + title + '\'' +
-                ", YOB=" + YOB +
-                '}';
+        return ID + ", " + firstName + ", " + lastName + ", " + title + ", " + YOB;
     }
 
     @Override

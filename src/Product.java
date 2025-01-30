@@ -50,12 +50,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "ID='" + ID + '\'' +
-                ", Name='" + Name + '\'' +
-                ", Description='" + Description + '\'' +
-                ", Cost=" + Cost +
-                '}';
+        return ID + ", " + Name + ", " + Description + ", " + Cost;
     }
 
     public String toCSV(){
