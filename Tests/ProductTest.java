@@ -57,6 +57,29 @@ class ProductTest {
     }
 
     @Test
+    void testToJSON() {
+        String expected = "{\n" +
+                "  \"ID\": \"00000A\",\n" +
+                "  \"Name\": \"Candy\",\n" +
+                "  \"Description\": \"Chocolate Candies\",\n" +
+                "  \"Cost\": 2.0\n" +
+                "}";
+        assertEquals(expected, pr1.toJSON());
+    }
+
+    @Test
+    void testToXML() {
+        String expected = "<Product>\n" +
+                "    <ID>00000A</ID>\n" +
+                "    <Name>Candy</Name>\n" +
+                "    <Description>Chocolate Candies</Description>\n" +
+                "    <Cost>2.0</Cost>\n" +
+                "</Product>";
+        assertEquals(expected, pr1.toXML());
+    }
+
+
+    @Test
     void testEquals() {
         assertEquals(pr1, pr2);
         assertNotEquals(pr1, pr3);

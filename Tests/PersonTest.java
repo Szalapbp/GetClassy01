@@ -83,6 +83,30 @@ class PersonTest {
     }
 
     @Test
+    void testToJSON() {
+        String expected = "{\n" +
+                "  \"ID\": \"00000A\",\n" +
+                "  \"FirstName\": \"Blake\",\n" +
+                "  \"LastName\": \"Szalapski\",\n" +
+                "  \"Title\": \"Mr.\",\n" +
+                "  \"YOB\": 2002\n" +
+                "}";
+        assertEquals(expected, p1.toJSON());
+    }
+
+    @Test
+    void testToXML() {
+        String expected = "<Person>\n" +
+                "    <ID>00000A</ID>\n" +
+                "    <FirstName>Blake</FirstName>\n" +
+                "    <LastName>Szalapski</LastName>\n" +
+                "    <Title>Mr.</Title>\n" +
+                "    <YOB>2002</YOB>\n" +
+                "</Person>";
+        assertEquals(expected, p1.toXML());
+    }
+
+    @Test
     void testToString() {
         String expected = "Person{ID='00000A', firstName='Blake', lastName='Szalapski', title='Mr.', YOB=2002}";
         assertEquals(expected, p1.toString());

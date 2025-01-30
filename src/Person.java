@@ -72,6 +72,27 @@ private int YOB = 0;
         return ID + "," + firstName + "," + lastName + "," + title + "," + YOB;
     }
 
+    public String toXML(){
+        return "<Person>\n" +
+                "    <ID>" + ID + "</ID>\n" +
+                "    <FirstName>" + firstName + "</FirstName>\n" +
+                "    <LastName>" + lastName + "</LastName>\n" +
+                "    <Title>" + title + "</Title>\n" +
+                "    <YOB>" + YOB + "</YOB>\n" +
+                "</Person>";
+
+    }
+
+    public String toJSON(){
+        return "{\n" +
+                "  \"ID\": \"" + ID + "\",\n" +
+                "  \"FirstName\": \"" + firstName + "\",\n" +
+                "  \"LastName\": \"" + lastName + "\",\n" +
+                "  \"Title\": \"" + title + "\",\n" +
+                "  \"YOB\": " + YOB + "\n" +
+                "}";
+    }
+
     public int getAge(){
         int currentYear = LocalDate.now().getYear();
         return currentYear - YOB;

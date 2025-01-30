@@ -62,6 +62,25 @@ public class Product {
         return ID + "," + Name + "," + Description + "," + Cost;
     }
 
+    public String toXML(){
+        return "<Product>\n" +
+                "    <ID>" + ID + "</ID>\n" +
+                "    <Name>" + Name + "</Name>\n" +
+                "    <Description>" + Description + "</Description>\n" +
+                "    <Cost>" + Cost + "</Cost>\n" +
+                "</Product>";
+
+    }
+
+    public String toJSON(){
+        return "{\n" +
+                "  \"ID\": \"" + ID + "\",\n" +
+                "  \"Name\": \"" + Name + "\",\n" +
+                "  \"Description\": \"" + Description + "\",\n" +
+                "  \"Cost\": " + Cost + "\n" +
+                "}";
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
