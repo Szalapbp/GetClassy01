@@ -1,3 +1,1 @@
-000001, Blake, Szalapski, Mr., 2002
-000002, John, Doe, Mr., 1999
-000003, Jane, Doe, Mrs., 1989
+000001, blake, szalapski, mr., 2002

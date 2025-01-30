@@ -17,7 +17,7 @@ public class ProductWriter {
         String Description = "";
         String rec ="";
         Double Cost = 0.0;
-        ArrayList<String> product = new ArrayList<String>();
+        ArrayList<String> product = new ArrayList<>();
 
 
         Scanner in = new Scanner(System.in);

@@ -18,7 +18,7 @@ public class PersonGenerator {
         String title = "";
         String rec ="";
         int YOB = 0;
-        ArrayList<String> people = new ArrayList<String>();
+        ArrayList<String> people = new ArrayList<>();
 
 
         Scanner in = new Scanner(System.in);
