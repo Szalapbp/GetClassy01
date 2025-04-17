@@ -19,20 +19,20 @@ class ProductTest {
     @Test
     void setID() {
         pr1.setID("00000A");
-        assertEquals("00000A", pr1.getID());
+        assertEquals("00000A", pr1.getFormattedID());
 
     }
 
     @Test
     void setName() {
         pr1.setName("Candy");
-        assertEquals("Candy", pr1.getName());
+        assertEquals("Candy", pr1.getFormattedName());
     }
 
     @Test
     void setDescription() {
         pr1.setDescription("Chocolate Candies");
-        assertEquals("Chocolate Candies", pr1.getDescription());
+        assertEquals("Chocolate Candies", pr1.getFormattedDescription());
 
     }
 

@@ -16,24 +16,24 @@ public class Product {
         Cost = cost;
     }
 
-    public String getID() {
-        return ID;
+    public String getFormattedID() {
+        return String.format("%-6s", ID);
     }
 
     public void setID(String ID) {
         this.ID = ID;
     }
 
-    public String getName() {
-        return Name;
+    public String getFormattedName() {
+        return String.format("%35s", Name);
     }
 
     public void setName(String name) {
         Name = name;
     }
 
-    public String getDescription() {
-        return Description;
+    public String getFormattedDescription() {
+        return String.format("%-75s", Description);
     }
 
     public void setDescription(String description) {
